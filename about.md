@@ -26,4 +26,4 @@ Liberator*](https://en.wikipedia.org/wiki/The_Liberator_(anti-slavery_newspaper)
 I've taught at WUSTL and [Deep
 Springs](http://www.newyorker.com/magazine/2006/09/04/the-searchers-2),
 where I learned to lasso. I write criticism and essays in my free time, or ride my
-[Bullet](https://en.wikipedia.org/wiki/Royal_Enfield_Bullet). Test.
+[Bullet](https://en.wikipedia.org/wiki/Royal_Enfield_Bullet). Testtest.
