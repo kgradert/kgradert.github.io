@@ -1,0 +1,75 @@
+# Site Info
+title: kenyon gradert
+tagline: 'kenyongradert'
+description: 'Personal Site'
+baseurl: ""
+url: http://kenyongradert.com
+#logo: '/public/miller_american_puritans.png'
+comments: true
+
+# Site configurations
+gems:
+  - jekyll-paginate
+exclude: ["Genfile", "Genfile.lock", ".gitignore", "Rakefile", "config.ru", "vendor"]
+
+markdown: kramdown
+kramdown:
+  input: GFM
+excerpt_separator: "<!-- more -->"
+sass:
+  style: compressed
+  sass_dir: _scss
+paginate: 5
+paginate_path: '/blog/page:num'
+permalink: pretty
+collections:
+  research_notes:
+    output: true
+    permalink: /research_notes/:path/
+
+
+version: 1.0.0
+
+# About/contact
+author:
+  name: Kenyon Gradert
+  description: <strong>Kenyon Gradert</strong> Volkswagen Research Fellow <strong>Universität Heidelberg</strong>
+  gravatar: 3733a5981deae3f9ef2bf9115550cfc0 # md5 hash of your email address
+  contact:
+    # linkedin:  https://www.linkedin.com/in/lizhihao
+    github: https://github.com/kgradert
+    # facebook:  <hide>
+    twitter: https://twitter.com/KenyonGradert
+    # weibo:     http://weibo.com/41173780
+    email:  mailto:kenyongradert@gmail.com
+
+# Navigation (2nd level links supported)
+nav:
+  About:
+    - '/about/'
+  CV:
+    - '/cv/'
+  Blog:
+    - '/blog/'
+    - { Tags: '/blog/tags/' }
+    - { Categories: '/blog/categories/' }
+  Research Notes (Login):
+    - '/research_notes/'
+  Home:
+    - '/'
+
+
+
+# Where are tags and categories displayed
+tag_page: '/blog/tags/'
+note_page: '/blog/categories/'
+
+hero:
+  image: /public/img/veteran_homer.jpg
+  caption: '"The Veteran in a New Field," Winslow Homer, 1865, <a href="http://www.metmuseum.org/toah/works-of-art/67.187.131/">The Met</a>'
+
+
+# Plugins
+mathjax: true # whether support mathjax
+google_analytics_token: 'UA-00000000-1' # leave blank if you don't want google analytics
+disqus_short_name: 'kenyongradert' # leave blank if you don't want disqus

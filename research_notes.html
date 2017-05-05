@@ -1,0 +1,12 @@
+---
+layout: default
+title: Research Notes
+---
+
+{% for research_notes in site.research_notes %}
+  <div class="research_notes">
+    <h1>{{ research_notes.category}}</h1>
+    <h4><a href="{{ research_notes.url }}">{{ research_notes.title }}</a></h4>
+  </div>
+  {% assign docs_by_category = site.documentation | group_by: "category" %}
+{% endfor %}

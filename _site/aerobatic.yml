@@ -1,0 +1,26 @@
+id: dcd4b850-205e-4e6c-9b8b-794a1a43f65d
+deploy:
+  ignore: []
+  directory: .
+plugins:
+  - name: basic-auth
+    path: /research_notes
+    options:
+      username: $BASIC_AUTH_USERNAME
+      password: $BASIC_AUTH_PASSWORD
+      maxFailedLogins: 5
+      failedLoginPeriod: 600
+  - name: basic-auth   #(Just repeat above, but different path, to protect diff folder.)
+    path: /photo_gallery
+    options:
+      username: $BASIC_AUTH_USERNAME
+      password: $BASIC_AUTH_PASSWORD
+
+      #loginPage: login.html (This points to a custom login page instead of generic, but I could never get it to work)
+
+
+  - name: custom-errors
+    options:
+      errors:
+        403: 403.html  # Display this error page if credentials incorrect
+  - name: webpage
