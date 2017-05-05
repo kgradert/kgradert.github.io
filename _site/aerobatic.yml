@@ -1,8 +1,9 @@
-id: dcd4b850-205e-4e6c-9b8b-794a1a43f65d
+id: 3848ac7a-4254-4a5c-bbe4-9fd93857ade9
 deploy:
   ignore: []
   directory: .
 plugins:
+  - name: webpage
   - name: basic-auth
     path: /research_notes
     options:

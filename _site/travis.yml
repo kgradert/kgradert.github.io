@@ -1,0 +1,17 @@
+language: ruby
+env:
+  global:
+  - secure: AEROBATIC_API_KEY
+  - TRAVIS_NODE_VERSION="6.9.5"
+
+install:
+  - rm -rf ~/.nvm && git clone https://github.com/creationix/nvm.git ~/.nvm && (cd ~/.nvm && git checkout `git describe --abbrev=0 --tags`) && source ~/.nvm/nvm.sh && nvm install $TRAVIS_NODE_VERSION
+  - npm install aerobatic-cli -g
+  - bundle install --path vendor/bundle
+
+script:
+- echo "url: https://__baseurl__" >> _config.yml
+- bundle exec jekyll build
+
+after_success:
+- aero deploy -d _site
